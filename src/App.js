@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+const App = () =>{
+  const [item, setItem] = useState("");
+  const [itemList, setItemList] = useState([])
+
+  const HandleAdd = () =>{
+    if(item!==""){
+    const newList = [...itemList, item];
+    setItemList(newList)
+    return (
+      <>
+      {newList}
+      {setItem("")}
+      </>
+    );
+    }
+  }
+
+  return(
+    <>
+      <h1>ToDo List</h1>
+      <input value={item} onChange={(e)=>setItem(e.target.value)} placeholder="Add an item"/>
+      <ul>
+      {itemList. map((item) => {
+      return <li key={item}>{item}</li>;
+      })}
+      </ul>
+      <button onClick={HandleAdd}>Add</button>
+    </>
   );
 }
 
