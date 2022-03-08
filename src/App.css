@@ -36,3 +36,49 @@
     transform: rotate(360deg);
   }
 }
+
+.main-heading{
+  text-align: center;
+  text-shadow:4px 4px 10px whitesmoke;
+  background-color: grey;
+  border:20px solid rgb(207, 207, 88);
+  color: whitesmoke;
+  box-shadow:4px 4px 23px 3px grey;
+}
+
+.main-div{
+  background-color:rgb(238, 238, 123);
+  box-shadow:4px 4px 23px 3px grey;
+  display: flex;
+  padding: 2%;
+  padding-bottom: 13%;
+}
+
+.left-div{
+  padding-left: 10%;
+  padding-right: 40%;
+}
+
+.left-right{
+  padding-left: 40%;
+}
+
+.add-btn{
+  margin-left: 7% !important;
+  margin-right: 10% !important;
+}
+
+.listItems{
+  color:gray;
+  text-shadow:4px 4px 10px gray;
+  font-weight: bold; 
+  list-style: none;
+}
+
+.check-box{
+  color:green !important;
+}
+
+.alignment{
+  display: flex;
+}
